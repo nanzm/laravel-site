@@ -6,6 +6,12 @@ use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
+
+    public function test()
+    {
+        return "hello man";
+    }
+
     public function index()
     {
         return view('post/index');
@@ -13,15 +19,12 @@ class PostController extends Controller
 
     public function show($id)
     {
-        return response()->json([
-            'name' => 'Abigail',
-            'state' => 'CA'
-        ]);
+        return view('post/show');
     }
 
     public function create()
     {
-        return "hello world";
+        return view('post/create');
     }
 
     public function store(Request $request)
@@ -29,12 +32,10 @@ class PostController extends Controller
         return "hello world";
     }
 
-
     public function edit($id)
     {
-        return "hello world";
+        return view('post/edit');
     }
-
 
     public function update(Request $request, $id)
     {
